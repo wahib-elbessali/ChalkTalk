@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
-const helmet = require("helmet");
+//const helmet = require("helmet");
 const connectDB = require("./config/db");
 const authRoutes = require("./routes/authRoutes");
 const chatRoutes = require("./routes/chatRoutes");
@@ -13,13 +13,13 @@ const getChatResponse = require("./config/bot");
 const http = require("http");
 const { Server } = require("socket.io");
 
-// Use environment variables (set CLIENT_URL, PORT, etc. in production)
+// Use environment variables
 const CLIENT_URL = process.env.CLIENT_URL || "http://localhost:5173";
 const PORT = process.env.PORT || 5000;
 
 // Create the express app and apply security middleware
 const app = express();
-app.use(helmet());
+//app.use(helmet());
 
 // Configure CORS using the client URL
 app.use(
@@ -119,8 +119,7 @@ io.on("connection", (socket) => {
           
           // Get the AI response using the secret API key stored in env variables
           const botResponse = await getChatResponse(botPrompt);
-          // Use an environment variable for the bot's user ID if needed
-          const chatbotId = process.env.CHATBOT_ID || "67b9be5876dcba6411261d09";
+          const chatbotId = "67b9be5876dcba6411261d09";
 
           const botReply = new Message({
             sender: chatbotId,
