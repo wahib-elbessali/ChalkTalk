@@ -24,7 +24,7 @@ const app = express();
 // Configure CORS using the client URL
 app.use(
   cors({
-    origin: true,
+    origin: CLIENT_URL,
     credentials: true,
   })
 );
@@ -42,7 +42,7 @@ app.use("/api/chat", chatRoutes);
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "*",
+    origin: CLIENT_URL,
     credentials: true,
   },
 });
