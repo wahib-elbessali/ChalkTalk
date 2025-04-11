@@ -1,4 +1,3 @@
-```markdown
 # ChalkTalk 🎓
 
 An AI-powered real-time chat platform for collaborative learning and subject-specific discussions.
@@ -125,5 +124,3 @@ npm run dev
    MongoDB Atlas connection
    WebSocket support enabled
    ```
-
-```
