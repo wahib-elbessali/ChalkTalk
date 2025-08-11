@@ -22,7 +22,8 @@ An AI-powered real-time chat platform for collaborative learning and subject-spe
   Mention users with @username autocomplete
 
 ## Screenshots 📸
-![Screenshot](./screenshots/2025-08-11 13 58 04.png)
+![Screenshot](./screenshots/1.png)
+![Screenshot](./screenshots/2.png)
 
 
 ## Tech Stack 🛠️
